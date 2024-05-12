@@ -1,0 +1,34 @@
+{% extends "home_page.html" %}
+
+{% block page-title %}
+{% if success %}
+{{ comment }}
+{% else %}
+{{ comment }}
+{% endif %}
+{% endblock %}
+
+{% block pagetitle %}
+{% if success %}
+{{ comment }}
+{% else %}
+{{ comment }}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container-sm px-5 py-5" id="term-form-result">
+    <h2 class="pb-2 border-bottom">Результат запроса</h2>
+    <p>Уважаемый пользователь, Ваш запрос завершился <span class="fw-bold">{% if success %}успешно{% else %}ошибкой{% endif %}</span>.
+    </p>
+    <h2 class="pb-2 border-bottom">Что дальше?</h2>
+    <ul>
+        <li>Добавить ещё одно <a href="/write_word">слово</a>,</li>
+        <li>зайти посмотреть <a href="/dictonary">словарик</a>,</li>
+        <li>проверить свои знания <a href="/dictonary">тут</a>,</li>
+        <li>вернуться на <a href="/">главную.</a></li>
+    </ul>
+</div>
+
+{% endblock %}

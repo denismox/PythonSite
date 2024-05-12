@@ -1,0 +1,43 @@
+{% extends "home_page.html" %}
+
+{% block page-title %}
+Редактировать
+{% endblock %}
+
+{% block pagetitle %}
+Редактировать
+{% endblock %}
+
+{% block page-lead %}
+Здесь можно редактировать словарь<br>
+Для добавления: заполните поля и нажмите кнопку &laquo;Отправить&raquo;<br>
+Для обновления: введите слово с неправильным переводом, напишите правильный перевод и нажмите &laquo;Обновить&raquo;<br>
+Для удаления: достаточно ввести только слово на английском языке и нажать кнопку &laquo;Удалить&raquo;.
+{% endblock %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="word_form">
+    <div class="row px-5 py-2">
+        <h3>Форма для редактирования</h3>
+    </div>
+    <form method="post">
+        <div class="row px-5 py-2">
+            <div class="col-md-6">
+                <label for="n_eng_word">Слово на английском языке:</label>
+                <input type="text" class="form-control input-lg" name="n_eng_word" id="n_eng_word" placeholder="home" value required>
+            </div>
+            <div class="col-md-6">
+                <label for="rus_word">перевод:</label>
+                <input type="text" class="form-control input-lg" name="n_rus_word" id="n_rus_word" placeholder="дом">
+            </div>
+        </div>
+        <div class="px-5 py-3">
+            <button type="submit" class="btn btn-primary" formaction="/send_word">Отправить</button>
+            <button type="submit" class="btn btn-success" formaction="/update_word">Обновить</button>
+            <button type="submit" class="btn btn-danger" formaction="/delete_word">Удалить</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "home_page.html" %}
+
+{% block page-title%}
+Словарь
+{% endblock %}
+
+{% block pagetitle%}
+Словарь
+{% endblock %}
+
+{% block page-lead %}
+Здесь вы можете посмотреть перевод нужного вам слова
+{% endblock %}
+
+{% block content %}
+
+<div class="container px-4 py-4" id="dict-table">
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3">#</th>
+              <th scope="col" class="py-3">Слово</th>
+              <th scope="col" class="py-3">Перевод</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%for cnt ,eng_word, rus_word in dic%}
+            <tr>
+                <td class="py-3">{{ cnt }}</td>
+                <td class="py-3">{{ eng_word }}</td>
+                <td class="py-3">{{ rus_word }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+
+{% endblock %}

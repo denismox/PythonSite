@@ -1,0 +1,56 @@
+{% extends "home_page.html" %}
+
+{% block page-title %}
+Словарь или dictionary
+{% endblock %}
+
+{% block pagetitle %}
+Словарь или dictionary
+{% endblock %}
+
+{% block page-lead %}
+На этом сайте можно найти перевод нужного вам слова, а также здесь вы можете проверить свои знания
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="row mx-auto text-center">
+        <div class="col-lg-4">
+            <img class=" bd-placeholder-img rounded-circle" width="160" height="160" src="static/English-dictionaries.jpg" role="img">
+                <!-- <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect> -->
+            </img>
+            <h2 class="fw-normal">Словарь</h2>
+            <p>
+                Словарь, в котором можно посмотреть интересующее вас слово
+            </p>
+            <p>
+                <a class="btn btn-primary" href="/dictonary">Посмотреть</a>
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" width="160" height="160"  src="static/redact.jpg" role="img" aria-label="Placeholder: 160x160" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            </img>
+            <h2 class="fw-normal">Редактировать</h2>
+            <p>
+                Здесь можно редактировать словарь
+            </p>
+            <p>
+                <a class="btn btn-primary" href="/write_word">Посмотреть</a>
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" width="160" height="160" src="static/check.jpg" role="img">
+                <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            </img>
+            <h2 class="fw-normal">Проверка знаний</h2>
+            <p>
+                Тут можно проверить свои знания
+            </p>
+            <p>
+                <a class="btn btn-primary" href="/check">Посмотреть</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
